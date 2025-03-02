@@ -1,0 +1,94 @@
+v 1.8.1 (12/04/2024)
+-Added the SetOpeningAllUrlSchemes method to decide whether it is worth trying to run an external application corresponding to this scheme without checking the availability of this scheme in the info.plist in the LSApplicationQueriesSchemes list (does not apply to schemes that are added via AddUrlCustomScheme, these schemes are processed manually). (IOS)
+-Ignore wait finish init in popular methods in webview (Important: but the methods are executed after calling the Init method). (Android & IOS)
+----
+v 1.8.0 (17/01/2024)
+-Fixed a bug that could lead to the loss of delegate links on the iOS version. (IOS)
+----
+v 1.7.7 (24/12/2023)
+-Fixed issues that could cause a conflict with other plugins. (Android)
+----
+v 1.7.6 (16/11/2023)
+-Fixed processing if a null argument is passed to OnReceivedData. (IOS)
+----
+v 1.7.5 (04/11/2023)
+-Fixed the webview disappearing when restoring the game after collapsing. (Android)
+----
+v 1.7.4 (23/07/2023)
+-Fixed File provider. (Android)
+----
+v 1.7.3 (23/07/2023)
+-File upload system changed. (Android)
+-Added namespace for AnimationType
+----
+v 1.7.2 (24/06/2023)
+-Fixed a problem in some situations when exchanging messages via schemas.(Android)
+----
+v 1.7.1 (06/06/2023)
+-Fixed a problem when the status bar was not removed and an empty bar appeared at the bottom on Android devices 10 and below.(Android)
+----
+v 1.7.0 (14/05/2023)
+-Added queries to the manifest for Android 11+ devices (Android)
+-Changed the accounting of screen sizes in full-screen mode (Android)
+-Changed the work with unknown intentions:
+ Instead of the ERR_UNKNOWN_URL_SCHEME error, the link will not be loaded, but will remain on the current page (the logic of popular browsers).(Android)
+----
+v 1.6.3 (03/04/2023)
+-Fixed appCache methods. Make compatible with android sdk-33 (Android)
+----
+v 1.6.2 (30/03/2023)
+-Fixed the problem of incorrect height scaling webview on Android API 30 and below (Android)
+-The update geo location permission in the background on iOS was removed due to strict verification of this permission by moderation (to return, manually add location to background nodes in Xcode or uncomment out the lines in IOSPostProcessBuild.cs) (IOS)
+----
+v 1.6.1 (30/03/2023)
+-Fixed the problem of incorrect height scaling webview on Android API 30 and below (Android)
+-The update geo location permission in the background on iOS was removed due to strict verification of this permission by moderation (to return, manually add location to background nodes in Xcode or uncomment out the lines in IOSPostProcessBuild.cs) (IOS)
+----
+v 1.6.0 (19/03/2023)
+-changing the file upload logic (Android)
+-Adding gestures in pop-up windows (IOS)
+-WellBuildParameters: added camera permission
+----
+v 1.5.3 (27/02/2023)
+-fixed hiding the webview if the webview is not in full screen mode (Android)
+-fixed screen flickering when first loading webview (Android)
+----
+v 1.5.2 (23/02/2023)
+-fixed the "DllNotFoundException" error (OSX Editor & OSX)
+----
+v 1.5.1 (12/02/2023)
+-fixed CanGoBack return incorrect when rare specific case (Android)
+----
+v 1.5.0 (13/07/2022)
+-added support Apple Silicon in OSX Unity Editor and OSX (beta)
+-fixed the problem of archiving and deploying the application in TestFlight
+----
+v 1.4.1 (29/05/2022)
+-Updated work with the status bar in accordance with android 11+
+----
+v 1.4.0 (17/05/2022)
+-Fixed IOS build issue in some situations
+----
+v 1.3.2 (09/05/2022)
+-Update External Dependency Manager
+-Fixed minor bugs
+----
+v 1.3.1 (13/01/2022)
+-Fixed the problem of removing the Toolbar when destroying the Webview on iOS
+-Added the alpha channel parameter in the SetToolbarTintColor method on iOS
+-Added the AddMotionEvenInCurrentSite method, which adds html code to the page to access the gyroscope on the site starting with IOS 13+
+----
+v 1.3 (31/10/2021)
+-Added the necessary things to fully support Android 11+
+----
+v 1.2 (04/09/2021)
+-Fixed work Multiple-Windows in Android && IOS
+----
+v 1.1.1 (13/05/2021)
+-bug fixes when enabling the Android platform in Unity OSX Editor
+----
+v 1.1 (09/05/2021)
+-Fixed the removal of the web view in android
+-Added WellSafeBrowser (launching a page in Chrome or Safari inside the app).
+-Added support for OSX Unity Editor and beta support for OSX apps.
+----
